@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="header">
+        <a href=""><img src="" alt=""></a>
+
+    </div>
+    for ceteroy 
+    <!-- <option value="">shirt</option>
+                    <option value="">jeans</option>
+                    <option value="">top</option> -->
+
+
+
+
+                    $select_query="select * from products order by rand() limit 0,4";
+        $result_query=mysqli_query($con,$select_query);
+        //$row=mysqli_fetch_assoc($result_query);
+        //echo $row['product_title'];
+        while($row=mysqli_fetch_assoc($result_query)){
+          $product_id=$row['product_id'];
+          $product_title=$row['product_title'];
+          $product_description=$row['product_description'];
+          $product_image1=$row['product_image1'];
+          $product_price=$row['product_price'];
+          echo "<div class='pro'>
+          <img src='./admin/product_images/$product_image1' alt='$product_title'>
+          <div class='des'>
+            <span>$product_title</span>
+            <h5>$product_description</h5>
+            <div class='star'>
+              <i class='fa-solid fa-star'></i>
+              <i class='fa-solid fa-star'></i>
+              <i class='fa-solid fa-star'></i>
+              <i class='fa-solid fa-star'></i>
+            </div>
+            <h4>rs400</h4>
+          </div>
+          <button class='addtocart'>add to cart</button>
+          <button class='view more'>view more</button>
+        </div>";
+          
+        }
+        
+        <div class="small-img-group">
+          <div class="small-img-col">
+              <img src="images/whiteshirt.jpg" width="100%" class="samll-img" alt="">
+          </div>
+          <div class="small-img-col">
+              <img src="images/blackshirt.jpg" width="100%" class="samll-img" alt="">
+          </div>
+          <div class="small-img-col">
+              <img src="images/whiteshirt.jpg" width="100%" class="samll-img" alt="">
+          </div>
+          <div class="small-img-col">
+              <img src="images/whiteshirt.jpg" width="100%" class="samll-img" alt="">
+          </div>
+      </div>
+  </div>
+
+
+  class="section-p1
+
+
+
+  $select_query="select * from products";
+  $result_query=mysqli_query($con,$select_query);
+  //$row=mysqli_fetch_assoc($result_query);
+  //echo $row['product_title'];
+  while($row=mysqli_fetch_assoc($result_query)){
+    $product_id=$row['product_id'];
+    $product_title=$row['product_title'];
+    $product_description=$row['product_description'];
+    $product_image1=$row['product_image1'];
+    $product_price=$row['product_price'];
+    echo "<div class='pro'>
+    <img src='./admin/product_images/$product_image1' alt=''>
+    <div class='des'>
+      <span>$product_title</span>
+      <h5>$product_description</h5>
+      <div class='star'>
+        <i class='fa-solid fa-star'></i>
+        <i class='fa-solid fa-star'></i>
+        <i class='fa-solid fa-star'></i>
+        <i class='fa-solid fa-star'></i>
+      </div>
+      <h4>rs400</h4>
+    </div>
+   <button class='addtocart'>add to cart</button>
+   <button>view more</button>
+  </div>";
+        
+  <a href='product_details.php?product_id=$product_id'
+</body>
+</html>
